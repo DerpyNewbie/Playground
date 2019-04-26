@@ -20,8 +20,10 @@ public class Main {
 
         String className = "Test";
         String methodSrc = "public void send() {" +
+                "   int a = 1;" +
+                "   int b = 2;" +
                 "   System.out.println(\"UwU Watz Dis!?\");" +
-                "   System.out.println(\"2 + 2 = \" + (2+2));" +
+                "   System.out.println(a + \" + \" + b + \" = \" + (a+b));" +
                 "}";
         try {
             // Create class with javassist
@@ -30,9 +32,9 @@ public class Main {
             CtMethod method = CtNewMethod.make(methodSrc, ctClass);
 
             ctClass.addMethod(method);
-            // Create object from class then call method
-            Object test = ctClass.toClass().newInstance();
-            test.getClass().getMethod(method.getName()).invoke(test);
+            // Call method using Reflection
+            Object object = ctClass.toClass().newInstance();
+            object.getClass().getMethod(method.getName()).invoke(object);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
