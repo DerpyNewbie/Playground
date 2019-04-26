@@ -1,4 +1,4 @@
-package com.github.derpynewbie.jsontoclass;
+package com.github.derpynewbie.classfromjson;
 
 import javassist.ClassPool;
 import javassist.CtClass;
