@@ -5,9 +5,6 @@ import javassist.CtClass;
 import javassist.CtMethod;
 import javassist.CtNewMethod;
 
-import java.util.Map;
-import java.util.Objects;
-
 public class Main {
 
 //    static String stringJson = "{\n" +
@@ -43,15 +40,4 @@ public class Main {
         }
 
     }
-
-    private static <T, E> T getKeyByValue(Map<T, E> map, E value) {
-        for (Map.Entry<T, E> entry : map.entrySet()) {
-            if (Objects.equals(value, entry.getValue())) {
-                return entry.getKey();
-            }
-        }
-        return null;
-    }
-
-
 }
