@@ -25,13 +25,14 @@ public class Main {
                 "}";
         try {
             // Create class with javassist
-            ClassPool cp = ClassPool.getDefault();
-            CtClass cc = cp.makeClass("Test");
-            CtMethod m = CtNewMethod.make(methodSrc, cc);
-            cc.addMethod(m);
+            ClassPool classPool = ClassPool.getDefault();
+            CtClass ctClass = classPool.makeClass(className);
+            CtMethod method = CtNewMethod.make(methodSrc, ctClass);
+
+            ctClass.addMethod(method);
             // Create object from class then call method
-            Object test = cc.toClass().newInstance();
-            test.getClass().getMethod(m.getName()).invoke(test);
+            Object test = ctClass.toClass().newInstance();
+            test.getClass().getMethod(method.getName()).invoke(test);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
