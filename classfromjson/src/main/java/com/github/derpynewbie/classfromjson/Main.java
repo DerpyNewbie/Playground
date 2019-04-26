@@ -19,7 +19,6 @@ public class Main {
         //TODO: somehow get argument from json
 
         String className = "Test";
-        String methodName = "send";
         String methodSrc = "public void send() {" +
                 "   System.out.println(\"UwU Watz Dis!?\");" +
                 "   System.out.println(\"2 + 2 = \" + (2+2));" +
@@ -32,9 +31,11 @@ public class Main {
             cc.addMethod(m);
             // Create object from class then call method
             Object test = cc.toClass().newInstance();
-            test.getClass().getMethod(methodName).invoke(test);
+            test.getClass().getMethod(m.getName()).invoke(test);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
+
+
 }
