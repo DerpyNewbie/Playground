@@ -4,6 +4,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/jsontoclass/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/websitewithjava/pom.xml" />
+        <option value="$PROJECT_DIR$/classfromjson/pom.xml" />
       </list>
     </option>
   </component>
