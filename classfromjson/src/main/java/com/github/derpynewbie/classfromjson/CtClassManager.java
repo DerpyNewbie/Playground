@@ -35,6 +35,16 @@ public class CtClassManager {
         }
     }
 
+    /**
+     * Calls private ctClass method from string.
+     *
+     * @param name       the name of method.
+     * @param params     the parameter of method.
+     * @param paramTypes the type of {@param params}.
+     * @throws IllegalArgumentException     when method does not exist or
+     *                                      {@param params} and {@param paramTypes}'s length are not equal.
+     * @throws ReflectiveOperationException when calling method is failed.
+     */
     public void doMethod(String name, Object[] params, Class[] paramTypes) throws IllegalArgumentException, ReflectiveOperationException {
         if (!this.methodList.contains(name)) {
             throw new IllegalArgumentException("Method does not exist");
@@ -76,6 +86,11 @@ public class CtClassManager {
         }
     }
 
+    /**
+     * Const.
+     *
+     * @param className the name of dynamic class.
+     */
     public CtClassManager(String className) {
         this.ctClass = ClassPool.getDefault().makeClass(className);
     }
