@@ -44,7 +44,7 @@ public class CtClassManager {
         }
         try {
             // Call method using reflection
-            this.object.getClass().getMethod(name, paramTypes).invoke(this.object);
+            this.object.getClass().getMethod(name, paramTypes).invoke(this.object, params);
 
         } catch (NoSuchMethodException ex1) {
             throw new IllegalArgumentException("Method not found");
