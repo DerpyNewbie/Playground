@@ -1,0 +1,10 @@
+{
+  "users": {
+    "methods": [
+      "run",
+      "test",
+      "send"
+    ],
+    "run": "public void send() { System.out.println(\"TEST\"); }"
+  }
+}
