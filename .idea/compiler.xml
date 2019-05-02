@@ -8,7 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="websitewithjava" />
         <module name="classfromjson" />
+        <module name="databasetest" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="classfromjson" target="1.5" />
+      <module name="databasetest" target="1.5" />
+      <module name="test" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Playground.iml" filepath="$PROJECT_DIR$/.idea/Playground.iml" />
       <module fileurl="file://$PROJECT_DIR$/classfromjson/classfromjson.iml" filepath="$PROJECT_DIR$/classfromjson/classfromjson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/databasetest/databasetest.iml" filepath="$PROJECT_DIR$/databasetest/databasetest.iml" />
     </modules>
   </component>
 </project>
